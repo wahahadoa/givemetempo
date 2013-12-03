@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "express": "2.5.8",
+    "socket.io": "",
     "jade": ">= 0.0.1"
   },
   "description": "tempo always be somewhere",
