@@ -8,14 +8,14 @@ script.
  
     "undefined" != typeof console && console.log("enter mobile page");
     socket.emit("send", {
-        key: #{key},
+        key: '#{key}',
         act: "enter"
     });
  
     $("#change_btn").click(function(){
         "undefined" != typeof console && console.log("send change color command");
         socket.emit("send", {
-            key: #{key},
+            key: '#{key}',
             act: "changebg"
         });
     });
