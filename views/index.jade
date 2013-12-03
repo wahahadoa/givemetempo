@@ -31,14 +31,14 @@ script.
         console.log(combine);
  
         switch (combine) {
-           case key + "_enter":
+           case b.key + "_enter":
               setTimeout(function () {
                  $("#qrcode").hide();
                  $("#status").append("<div>mobile IN</div>");
               },500);
             break;
  
-            case key + "_changebg":
+            case b.key + "_changebg":
                setTimeout(function () {
                   var str = "0123456789abcdef", t = "";
                   for (j = 0; j < 6; j++) {
