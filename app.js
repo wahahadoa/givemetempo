@@ -28,8 +28,8 @@ app.configure('production', function(){
 });
 
 // Routes
-
 app.get('/', routes.index);
+app.get('/', routes.controll);
 
 //app.listen(3000);
 app.listen(process.env.PORT || 3000);
