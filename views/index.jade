@@ -3,18 +3,4 @@ h1= title
 p Welcome to #{title}
 #qrcode
 script.
-  function S4() {
-    return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
-  }
- 
-  function NewGuid() {
-    return (S4()+S4());
-  }
-          
-  $(document).ready(function(){
-    var key = NewGuid();
-    console.log(key);
-    $("#qrcode").append("<img src='http://chart.apis.google.com/chart?chs=300x300&cht=qr&chl=http://givemetempo.herokuapp.com/controll/?key=" + key + "&choe=UTF-8' />");
-  });
-    
- 
+  
