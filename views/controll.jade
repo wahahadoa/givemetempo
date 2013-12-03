@@ -1,2 +1,21 @@
-hello wold
-p #{title}
+script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+h1= title
+p Mobile Welcome to #{title}
+input(type='button', id="clickTest", value="click")
+script.
+    var socket = io.connect("http://Nodejs伺服器位置:埠號");
+    "undefined" != typeof console && console.log("user enter via mobile");
+ 
+    "undefined" != typeof console && console.log("enter mobile page");
+    socket.emit("send", {
+        key: key,
+        act: "enter"
+    });
+ 
+    $("#change_btn").click(function(){
+        "undefined" != typeof console && console.log("send change color command");
+        socket.emit("send", {
+            key: key,
+            act: "changebg"
+        });
+    });

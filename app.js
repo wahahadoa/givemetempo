@@ -30,7 +30,7 @@ app.configure('production', function(){
 
 // Routes
 app.get('/', routes.index);
-app.get('/controll', routes.controll);
+app.get('/controll/:key', routes.controll);
 
 // socket io
 io.sockets.on('connection', function (socket) {
