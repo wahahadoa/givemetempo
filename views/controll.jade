@@ -4,7 +4,8 @@ h1= title
 p Mobile Welcome to #{title} #{key}
 input(type='button', id="change_btn", value="click")
 script.
-    var socket = io.connect(process.env.IP+":"+process.env.PORT);
+    //var socket = io.connect(process.env.IP+":"+process.env.PORT);
+    var socket = io.connect(window.location.hostname);
     "undefined" != typeof console && console.log("user enter via mobile");
  
     "undefined" != typeof console && console.log("enter mobile page");

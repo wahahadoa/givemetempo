@@ -21,7 +21,8 @@ script.
           
   $(document).ready(function(){
      // NodeJS Server
-     var nodejs_server = process.env.IP+":"+process.env.PORT;
+     //var nodejs_server = process.env.IP+":"+process.env.PORT;
+     var nodejs_server = window.location.hostname;
      // connect
      var socket = io.connect("" + nodejs_server);
      socket.on("get_response", function (b) {
