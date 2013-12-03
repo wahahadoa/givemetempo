@@ -1,7 +1,7 @@
 script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
 h1= title
 p Mobile Welcome to #{title} #{key}
-input(type='button', id="clickTest", value="click")
+input(type='button', id="change_btn", value="click")
 script.
     var socket = io.connect("http://Nodejs伺服器位置:埠號");
     "undefined" != typeof console && console.log("user enter via mobile");
