@@ -23,7 +23,7 @@ script.
      // NodeJS Server
      var nodejs_server = process.env.IP+":"+process.env.PORT;
      // connect
-     var socket = io.connect("http://" + nodejs_server);
+     var socket = io.connect("" + nodejs_server);
      socket.on("get_response", function (b) {
         var combine = b.key + "_" + b.act;
         console.log(combine);
