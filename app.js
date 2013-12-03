@@ -7,6 +7,7 @@ var express = require('express')
   , routes = require('./routes');
 
 var app = module.exports = express.createServer();
+var io = require('socket.io').listen(app);
 
 // Configuration
 
@@ -30,6 +31,27 @@ app.configure('production', function(){
 // Routes
 app.get('/', routes.index);
 app.get('/controll', routes.controll);
+
+// socket io
+io.sockets.on('connection', function (socket) {
+ 
+    socket.on('send', function (data) {
+        switch ( data.act )
+        {
+            case "enter":
+            io.sockets.emit('get_response', data);
+            console.log("Sending getEnter");
+            break;
+ 
+            case "changebg":
+            io.sockets.emit('get_response', data);
+            console.log("Sending changeBg");
+            break;
+        }
+ 
+    });
+ 
+});
 
 //app.listen(3000);
 app.listen(process.env.PORT || 3000);

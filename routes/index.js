@@ -8,5 +8,5 @@ exports.index = function(req, res){
 };
 
 exports.controll = function(req, res){
-  res.render('controll', { title: 'Tempo controll Test' })
+  res.render('controll', { title: 'Give me a tempo' })
 };
