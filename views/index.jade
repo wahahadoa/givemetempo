@@ -1,6 +1,7 @@
 script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
 h1= title
 p Welcome to #{title}
+#status
 input(type='button', id="addqrcode", value="Add")
 #qrcode
 script.
@@ -23,5 +24,29 @@ script.
      var nodejs_server = process.env.IP+":"+process.env.PORT;
      // connect
      var socket = io.connect("http://" + nodejs_server);
+     socket.on("get_response", function (b) {
+        var combine = b.key + "_" + b.act;
+        console.log(combine);
+ 
+        switch (combine) {
+ 
+        case key + "_enter":
+            setTimeout(function () {
+                $("#qrcode").hide();
+                $("#status").append("<div>mobile IN</div>");
+            }, 500);
+        break;
+ 
+        case key + "_changebg":
+            setTimeout(function () {
+                var str = "0123456789abcdef", t = "";
+                for (j = 0; j < 6; j++) {
+                   t = t + str.charAt(Math.random() * str.length);
+                }
+ 
+                $("body").css("background-color", t);
+            }, 500);
+        break;
+    }
   
   });
