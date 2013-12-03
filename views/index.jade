@@ -16,7 +16,7 @@ script.
   $('#addqrcode').click(function(){
     var key = NewGuid();
     console.log(key);
-    $("#qrcode").append("<img src='http://chart.apis.google.com/chart?chs=300x300&cht=qr&chl=http://givemetempo.herokuapp.com/controll/?key=" + key + "&choe=UTF-8' />"); 
+    $("#qrcode").append("<img src='http://chart.apis.google.com/chart?chs=300x300&cht=qr&chl=http://givemetempo.herokuapp.com/controll/key=" + key + "&choe=UTF-8' />"); 
   });
           
   $(document).ready(function(){
