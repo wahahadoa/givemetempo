@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Tempo Test' })
+  res.render('index', { title: 'Give me Tempo' })
 };
 
 exports.controll = function(req, res){
