@@ -10,7 +10,7 @@ h1= title
 p Mobile Welcome to #{title} #{key}
 //input(type='button', id="change_btn", value="click")
 //a(href='#', onclick='changePosition();') change postion
-#mobile_player
+#mobileplayer
 #content
     h1 Match it
       #sphere
@@ -66,17 +66,17 @@ script.
         });
     });
     
-script
     socket.on("get_response", function (b) {
-      var combine = b.key + "_" + b.act;
-      console.log(combine);
-      switch (combine) {
-      case b.key + "_countme":
-      $('#mobile_player').html(b.count+"P");
-      break;
-      }
-      }
-      
+       var combine = b.key + "_" + b.act;
+        console.log(combine);
+ 
+        switch (combine) {
+           case b.key + "_countme":
+              //$('#mobile_player').html(b.count+"P");
+           break;
+        }
+    }
+    
 script(type='text/javascript')
       var x = 0, y = 0,
       vx = 0, vy = 0,
