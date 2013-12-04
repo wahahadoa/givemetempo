@@ -115,6 +115,7 @@ script(type='text/javascript')
       }
 script
     function showOverlap(){
+      alert('asd');
       var collisions = $("#sphere").collision( ".obstacle", { relative: "collider", obstacleData: "odata", colliderData: "cdata", directionData: "ddata", as: "<div/>" } );
       for( var i=0; i<collisions.length; i++ ){
       var o = $(collisions[i]).data("odata");
