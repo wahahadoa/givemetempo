@@ -66,17 +66,17 @@ script.
         });
     });
     
+script
     socket.on("get_response", function (b) {
-       var combine = b.key + "_" + b.act;
-        console.log(combine);
- 
-        switch (combine) {
-           case b.key + "_countme":
-              
-           break;
-        }
-    }
-    
+      var combine = b.key + "_" + b.act;
+      console.log(combine);
+      switch (combine) {
+      case b.key + "_countme":
+      $('#mobile_player').html(b.count+"P");
+      break;
+      }
+      }
+      
 script(type='text/javascript')
       var x = 0, y = 0,
       vx = 0, vy = 0,
