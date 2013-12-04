@@ -54,13 +54,9 @@ script.
               },500);
             break;
  
-            case b.key + "_changebg":
+            case b.key + "_changescore":
                setTimeout(function () {
-                  var str = "0123456789abcdef", t = "";
-                  for (j = 0; j < 6; j++) {
-                     t = t + str.charAt(Math.random() * str.length);
-                  }
-                  $("body").css("background-color", t);
+                  $('.'+b.key+'_score').text(b.score);
                 }, 500);
             break;
         }

@@ -78,6 +78,7 @@ script.
     });
     
 script(type='text/javascript')
+      var controll_score = 0;
       var x = 0, y = 0,
       vx = 0, vy = 0,
       ax = 0, ay = 0;
@@ -112,7 +113,14 @@ script(type='text/javascript')
       var collisions = collision($('#sphere'), $('#touch'));
       $('#collisions').text(collisions);
       if(collisions){
+      controll_score = controll_score + 1;
       changePosition();
+      "undefined" != typeof console && console.log("send change score command");
+        socket.emit("send", {
+            key: '#{key}',
+            score: controll_score,
+            act: "changescore"
+        });
       }
       sphere.style.top = y + "px";
       sphere.style.left = x + "px";

@@ -55,9 +55,9 @@ io.sockets.on('connection', function (socket) {
             console.log("get count");
             break;    
  
-            case "changebg":
+            case "changescore":
             io.sockets.emit('get_response', data);
-            console.log("Sending changeBg");
+            console.log("Sending changeScore");
             break;
         }
  
