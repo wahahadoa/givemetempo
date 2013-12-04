@@ -41,7 +41,6 @@ script.
            case b.key + "_enter":
               if ( $.inArray(b.key, player_key) > -1 ) break;
               setTimeout(function () {
-                 $("#qrcode").hide();
                  //$("#status").append("<div>mobile IN</div>");
                  people_count = people_count + 1;
                  player_key.push(b.key);
