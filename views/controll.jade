@@ -9,6 +9,7 @@ script(src='/javascripts/jquery-collision.js')
 h1= title
 p Mobile Welcome to #{title} #{key}
 //input(type='button', id="change_btn", value="click")
+a(href='#', onclick='changePosition();') change postion
 #content
     h1 Match it
       #sphere
@@ -110,6 +111,20 @@ script
       var c = $(collisions[i]).data("cdata");
       var d = $(collisions[i]).data("ddata");
       }
+      }
+script
+    function changePosition(){
+      var docHeight = $(document).height(),
+      docWidth = $(document).width(),
+      $div = $('#touch'),
+      divWidth = $div.width(),
+      divHeight = $div.height(),
+      heightMax = docHeight - divHeight,
+      widthMax = docWidth - divWidth;
+      $div.css({
+      left: Math.floor( Math.random() * widthMax ),
+      top: Math.floor( Math.random() * heightMax )
+      });
       }
 
     
