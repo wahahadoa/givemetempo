@@ -2,7 +2,7 @@ script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery
 script(src='/socket.io/socket.io.js')
 h1= title
 input(type='button', id="addqrcode", value="Add")
-p Welcome to #{title}
+p to #{title}
 #status
 #qrcode
 #scoreboard
@@ -40,7 +40,9 @@ script.
            case b.key + "_enter":
               setTimeout(function () {
                  $("#qrcode").hide();
-                 $("#status").append("<div>mobile IN</div>");
+                 //$("#status").append("<div>mobile IN</div>");
+                 people_count = people_count + 1;
+                 $(".example1 tr:last").append("<tr><td>"+people_count+"P</td><td><span class='"+b.key+"_score'></span></td></tr>");
               },500);
             break;
  
