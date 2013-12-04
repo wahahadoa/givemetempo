@@ -98,7 +98,9 @@ script(type='text/javascript')
       boundingBoxCheck();
       var collisions = collision($('#sphere'), $('#touch');
       $('#collisions').text(collisions);
-      if(collisions) changePosition();
+      if(collisions){
+      changePosition();
+      }
       sphere.style.top = y + "px";
       sphere.style.left = x + "px";
       }, 25);
