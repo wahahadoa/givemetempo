@@ -49,6 +49,11 @@ io.sockets.on('connection', function (socket) {
             io.sockets.emit('get_response', data);
             console.log("Sending getEnter");
             break;
+            
+            case "countme":
+            io.sockets.emit('get_response', data);
+            console.log("get count");
+            break;    
  
             case "changebg":
             io.sockets.emit('get_response', data);

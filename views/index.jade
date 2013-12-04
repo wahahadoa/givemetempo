@@ -46,6 +46,11 @@ script.
                  people_count = people_count + 1;
                  player_key.push(b.key);
                  $(".example1").append("<tr><td>"+people_count+"P</td><td><span class='"+b.key+"_score'>0</span></td></tr>");
+                 socket.emit("send", {
+                    key: b.key,
+                    count: people_count,
+                    act: "countme"
+                 });
               },500);
             break;
  
