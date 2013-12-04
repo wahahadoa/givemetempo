@@ -12,7 +12,7 @@ p Mobile Welcome to #{title} #{key}
 a(href='#', onclick='changePosition();') change postion
 #content
     h1 Match it
-      #sphere
+      #sphere.obstacle
       ul
         li
           | acceleration x:
@@ -49,7 +49,7 @@ a(href='#', onclick='changePosition();') change postion
           span#ddata  
       | test:
       span#test
-      #touch.obstacle
+      #touch
 
 
 script.
@@ -115,7 +115,7 @@ script(type='text/javascript')
       }
 script
     function showOverlap(){
-      var collisions = $("#sphere").collision( ".obstacle", { relative: "collider", obstacleData: "odata", colliderData: "cdata", directionData: "ddata", as: "<div/>" } );
+      var collisions = $("#touch").collision( ".obstacle", { relative: "collider", obstacleData: "odata", colliderData: "cdata", directionData: "ddata", as: "<div/>" } );
       for( var i=0; i<collisions.length; i++ ){
       var o = $(collisions[i]).data("odata");
       var c = $(collisions[i]).data("cdata");
