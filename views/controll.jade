@@ -1,8 +1,20 @@
+!!! 5
+html(xmlns='http://www.w3.org/1999/xhtml')
+head
+  title GiveMeTempo
+    meta(name='viewport', content='width=device-width,user-scalable=yes')
 script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
 script(src='/socket.io/socket.io.js')
 h1= title
 p Mobile Welcome to #{title} #{key}
-input(type='button', id="change_btn", value="click")
+//input(type='button', id="change_btn", value="click")
+#content
+    h1 Math it
+      #sphere
+      span#test
+
+
+
 script.
     //var socket = io.connect(process.env.IP+":"+process.env.PORT);
     var socket = io.connect(window.location.hostname);
