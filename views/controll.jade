@@ -102,14 +102,14 @@ script(type='text/javascript')
       if (x>document.documentElement.clientWidth-20) { x = document.documentElement.clientWidth-20; vx = -vx; }
       if (y>document.documentElement.clientHeight-20) { y = document.documentElement.clientHeight-20; vy = -vy; }
       }
-      
-      function showOverlap(){
-         var collisions = $("#ball").collision( ".obstacle", { relative: "collider", obstacleData: "odata", colliderData: "cdata", directionData: "ddata", as: "<div/>" } );
-         for( var i=0; i<collisions.length; i++ ){
-            var o = $(collisions[i]).data("odata");
-		    var c = $(collisions[i]).data("cdata");
-		    var d = $(collisions[i]).data("ddata");
-         }
+script
+    function showOverlap(){
+      var collisions = $("#ball").collision( ".obstacle", { relative: "collider", obstacleData: "odata", colliderData: "cdata", directionData: "ddata", as: "<div/>" } );
+      for( var i=0; i<collisions.length; i++ ){
+      var o = $(collisions[i]).data("odata");
+      var c = $(collisions[i]).data("cdata");
+      var d = $(collisions[i]).data("ddata");
+      }
       }
 
     
