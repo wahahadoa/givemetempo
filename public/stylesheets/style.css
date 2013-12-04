@@ -24,6 +24,8 @@ a {
 	border-radius: 50px;
 	-webkit-radius: 50px;
 	background-color: blue;
+	background-color: rgba( 0, 0, 255, 0.5 );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#880000FF, endColorstr=#880000FF);
 }
 
 #touch {
