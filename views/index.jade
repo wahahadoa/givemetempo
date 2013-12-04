@@ -22,7 +22,7 @@ script.
   $('#addqrcode').click(function(){
     var key = NewGuid();
     console.log(key);
-    $("#qrcode").append("<img src='http://chart.apis.google.com/chart?chs=300x300&cht=qr&chl=http://givemetempo.herokuapp.com/controll/" + key + "&choe=UTF-8' />"); 
+    $("#qrcode").append("<img id='"+key+"_qrcode' src='http://chart.apis.google.com/chart?chs=300x300&cht=qr&chl=http://givemetempo.herokuapp.com/controll/" + key + "&choe=UTF-8' />"); 
   });
           
   $(document).ready(function(){
@@ -41,6 +41,7 @@ script.
            case b.key + "_enter":
               if ( $.inArray(b.key, player_key) > -1 ) break;
               setTimeout(function () {
+                 $("#"+b.key+"_qrcode").hide();
                  //$("#status").append("<div>mobile IN</div>");
                  people_count = people_count + 1;
                  player_key.push(b.key);
