@@ -65,6 +65,7 @@ script.
             act: "changebg"
         });
     });
+    
     socket.on("get_response", function (b) {
        var combine = b.key + "_" + b.act;
         console.log(combine);
