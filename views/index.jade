@@ -32,16 +32,19 @@ script.
      // connect
      var socket = io.connect("" + nodejs_server);
      var people_count = 0;
+     var player_key = [];
      socket.on("get_response", function (b) {
         var combine = b.key + "_" + b.act;
         console.log(combine);
  
         switch (combine) {
            case b.key + "_enter":
+              if ( $.inArray(b.key, player_key) > -1 ) break;
               setTimeout(function () {
                  $("#qrcode").hide();
                  //$("#status").append("<div>mobile IN</div>");
                  people_count = people_count + 1;
+                 player_key.push(b.key);
                  $(".example1").append("<tr><td>"+people_count+"P</td><td><span class='"+b.key+"_score'>0</span></td></tr>");
               },500);
             break;
