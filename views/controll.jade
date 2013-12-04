@@ -105,6 +105,7 @@ script(type='text/javascript')
       y = parseInt(y + vy / 50);
       x = parseInt(x + vx / 50);
       boundingBoxCheck();
+      $('#collisions').text(collision($('#sphere'), $('#touch')));
       sphere.style.top = y + "px";
       sphere.style.left = x + "px";
       }, 25);
@@ -115,8 +116,6 @@ script(type='text/javascript')
       if (x>document.documentElement.clientWidth-20) { x = document.documentElement.clientWidth-20; vx = -vx; }
       if (y>document.documentElement.clientHeight-20) { y = document.documentElement.clientHeight-20; vy = -vy; }
       //showOverlap();
-      var collisions = collision($('#sphere'), $('#touch'));
-      if(collisions) $('#collisions').val("true");
       }
 script
     function showOverlap(){
