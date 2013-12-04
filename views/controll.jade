@@ -116,7 +116,7 @@ script(type='text/javascript')
       if (y>document.documentElement.clientHeight-20) { y = document.documentElement.clientHeight-20; vy = -vy; }
       //showOverlap();
       var collisions = collision($('#sphere'), $('#touch'));
-      if(collisions) $('#collisions').val(collisions);
+      if(collisions) $('#collisions').val("true");
       }
 script
     function showOverlap(){
