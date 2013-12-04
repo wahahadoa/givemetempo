@@ -65,13 +65,14 @@ script.
             act: "changebg"
         });
     });
+    
     socket.on("get_response", function (b) {
        var combine = b.key + "_" + b.act;
         console.log(combine);
  
         switch (combine) {
            case b.key + "_countme":
-              $('#mobile_player').html(b.count+"P");
+              $('#mobile_player').text(b.count+"P");
            break;
         }
     });
