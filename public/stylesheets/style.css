@@ -37,6 +37,7 @@ a {
 
 #scoreboard { float:left;width:100%; }
 #mobile_player { font-size: 23px;font-weight: bold; }
+ul {display:none;}
 
 table.example1 {background-color:transparent;border-collapse:collapse;}
 table.example1 td {border:1px solid black;padding:5px;width:50%;}
